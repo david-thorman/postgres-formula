@@ -55,7 +55,7 @@ postgresql-extra-pkgs-installed:
 postgresql-conf:
   file.blockreplace:
     - name: {{ postgres.conf_dir }}/postgresql.conf
-    - marker_start: "# Managed by SaltStack: listen_addresses: please do not edit"
+    - marker_start: "# Managed by SaltStack: please do not edit --"
     - marker_end: "# Managed by SaltStack: end of salt managed zone --"
     - content: |
         {{ postgres.postgresconf|indent(8) }}
