@@ -39,8 +39,8 @@ postgresql-cluster-prepared:
 {% endfor %}
 
 postgresql-running:
-  service.running:
-    - enable: True
+  service.{{ 'running' if postgres.running else 'dead' }}:
+    - enable: {{ postgres.enabled }}
     - reload: True
     - name: {{ postgres.service }}
     - reload: true

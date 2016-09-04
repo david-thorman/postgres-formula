@@ -8,6 +8,9 @@ postgres:
     - postgresql-contrib
     - postgresql-plpython
 
+  running: True
+  enabled: True
+
   users:
     localUser:
       ensure: present

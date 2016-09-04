@@ -16,6 +16,8 @@ postgres:
   pg_hba.conf: salt://postgres/pg_hba.conf
   user: postgres
   group: postgres
+  running: True
+  enabled: True
   # if prepare_cluster is over-ridden in any of:
   # - osmap.yaml
   # - oscodenamemap.yaml
