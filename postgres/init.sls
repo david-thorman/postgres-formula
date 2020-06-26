@@ -28,7 +28,7 @@ postgresql-cluster-prepared:
   cmd.run:
     - cwd: /
     - name: {{ postgres.prepare_cluster.command }}
-    - user: {{ postgres.prepare_cluster.user }}
+    - runas: {{ postgres.prepare_cluster.user }}
     - unless:
       - {{ postgres.prepare_cluster.test }}
     - require:
