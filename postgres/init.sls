@@ -97,7 +97,6 @@ postgresql-user-{{ name }}:
     - name: {{ name }}
     - createdb: {{ user.get('createdb', False) }}
     - createroles: {{ user.get('createroles', False) }}
-    - createuser: {{ user.get('createuser', False) }}
     - inherit: {{ user.get('inherit', True) }}
     - replication: {{ user.get('replication', False) }}
     - password: {{ user.password }}
